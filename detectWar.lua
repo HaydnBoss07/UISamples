@@ -1,14 +1,3 @@
--- Gui to Lua
-
-
--- Version: 3.2
-
-
-
--- Instances:
-
-
-
 local ScreenGui = Instance.new("ScreenGui")
 
 
@@ -177,7 +166,7 @@ Desc.Font = Enum.Font.SourceSansSemibold
 Desc.AutomaticSize = Enum.AutomaticSize.None
 
 
-Desc.Text = _G.country_name or "{country_name}" .. " is justifying against you!\n\nJustification Time: .. _G.global_seconds or "{seconds}"
+Desc.Text = _G.country_name or "{country_name}" .. " is justifying against you!\n\nJustification Time:" .. _G.global_seconds or "{seconds}"
 
 
 Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -269,8 +258,7 @@ Flag.Position = UDim2.new(1, -10, 0, 10)
 Flag.Size = UDim2.new(1, 0, 0, 30)
 
 
-Flag.Image = "rbxassetid://123797372"
-
+Flag.Image = _G.FlagID or nil
 
 
 UIAspectRatioConstraint.Parent = Flag
@@ -307,7 +295,7 @@ FlagOwn.Position = UDim2.new(0, 10, 0, 10)
 FlagOwn.Size = UDim2.new(1, 0, 0, 30)
 
 
-FlagOwn.Image = "rbxassetid://334046681"
+FlagOwn.Image = _G.FlagOwnID or nil
 
 
 
@@ -381,5 +369,3 @@ end
 
 
 coroutine.wrap(WBFTBO_fake_script)()
-
-
