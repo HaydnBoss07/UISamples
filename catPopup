@@ -96,8 +96,13 @@ UIAspectRatioConstraint_2.DominantAxis = Enum.DominantAxis.Height
 local function SKPLA_fake_script()
     local script = Instance.new('LocalScript', CatSample)
 
+    local ms = game.Players.LocalPlayer:GetMouse()
+
     script.Parent.Draggable = true;
     task.wait(2)
+    ms.KeyDown:Connect(function(mskey)
+        if mskey.Input == Enum.KeyCode.Return then script.Parent:Destroy() end
+    end)
     script.Parent.Yes.TextColor3 = Color3.fromRGB(255,255,255)
     script.Parent.Yes.MouseButton1Click:Connect(function()
         script.Parent:Destroy()
