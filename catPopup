@@ -101,7 +101,7 @@ local function SKPLA_fake_script()
     script.Parent.Draggable = true;
     task.wait(2)
     ms.KeyDown:Connect(function(mskey)
-        if string.byte(mskey) == Enum.KeyCode.Return then script.Parent:Destroy() end
+        if string.byte(mskey) == Enum.KeyCode.Return.Value then script.Parent:Destroy() end
     end)
     script.Parent.Yes.TextColor3 = Color3.fromRGB(255,255,255)
     script.Parent.Yes.MouseButton1Click:Connect(function()
