@@ -1,0 +1,104 @@
+local CatSample = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Desc = Instance.new("TextLabel")
+local Yes = Instance.new("TextButton")
+local Flag = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local FlagOwn = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+CatSample.Name = "CatSample"
+CatSample.Parent = game.StarterGui.GameGui
+CatSample.Active = true
+CatSample.AnchorPoint = Vector2.new(0.5, 0.5)
+CatSample.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
+CatSample.BorderColor3 = Color3.fromRGB(30, 36, 43)
+CatSample.Draggable = true
+CatSample.Position = UDim2.new(0.5, 0, 0.5, 0)
+CatSample.Size = UDim2.new(0, 300, 0, 79)
+
+Title.Name = "Title"
+Title.Parent = CatSample
+Title.AnchorPoint = Vector2.new(0.5, 0)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.5, 0, 0, 10)
+Title.Size = UDim2.new(0.600000024, 0, 0, 30)
+Title.ZIndex = 2
+Title.Font = Enum.Font.SourceSansSemibold
+Title.Text = "Catware just called"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 18.000
+Title.TextStrokeTransparency = 0.800
+Title.TextWrapped = true
+
+UITextSizeConstraint.Parent = Title
+UITextSizeConstraint.MaxTextSize = 18
+
+Desc.Name = "Desc"
+Desc.Parent = CatSample
+Desc.AnchorPoint = Vector2.new(0.5, 0)
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.Position = UDim2.new(0.5, 0, 0, 45)
+Desc.Size = UDim2.new(1, -10, 0, 14)
+Desc.Font = Enum.Font.SourceSansSemibold
+Desc.Text = "They said you are in an electronic deficit"
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextSize = 14.000
+Desc.TextStrokeTransparency = 0.800
+Desc.TextWrapped = true
+Desc.TextYAlignment = Enum.TextYAlignment.Top
+
+Yes.Name = "Yes"
+Yes.Parent = CatSample
+Yes.AnchorPoint = Vector2.new(0.5, 0)
+Yes.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
+Yes.BorderColor3 = Color3.fromRGB(30, 36, 43)
+Yes.Position = UDim2.new(0.5, 0, 1, 5)
+Yes.Size = UDim2.new(1, 0, 0, 25)
+Yes.Font = Enum.Font.SourceSansSemibold
+Yes.Text = "I should probably make more factories"
+Yes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Yes.TextSize = 16.000
+Yes.TextStrokeTransparency = 0.800
+
+Flag.Name = "Flag"
+Flag.Parent = CatSample
+Flag.AnchorPoint = Vector2.new(1, 0)
+Flag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Flag.BackgroundTransparency = 1.000
+Flag.BorderSizePixel = 0
+Flag.Position = UDim2.new(1, -10, 0, 10)
+Flag.Size = UDim2.new(1, 0, 0, 30)
+Flag.Image = getgenv().otherimg
+
+UIAspectRatioConstraint.Parent = Flag
+UIAspectRatioConstraint.AspectRatio = 1.500
+UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
+
+FlagOwn.Name = "FlagOwn"
+FlagOwn.Parent = CatSample
+FlagOwn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FlagOwn.BackgroundTransparency = 1.000
+FlagOwn.BorderSizePixel = 0
+FlagOwn.Position = UDim2.new(0, 10, 0, 10)
+FlagOwn.Size = UDim2.new(1, 0, 0, 30)
+FlagOwn.Image = getgenv().plrimg
+
+UIAspectRatioConstraint_2.Parent = FlagOwn
+UIAspectRatioConstraint_2.AspectRatio = 1.500
+UIAspectRatioConstraint_2.DominantAxis = Enum.DominantAxis.Height
+
+local function KKKOZ_fake_script()
+	local script = Instance.new('LocalScript', CatSample)
+
+	script.Parent.Draggable = true;
+	
+	script.Parent.Yes.MouseButton1Click:Connect(function()
+		script.Parent:Destroy()
+	end)
+end
+coroutine.wrap(KKKOZ_fake_script)()
