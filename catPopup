@@ -54,6 +54,7 @@ Desc.TextYAlignment = Enum.TextYAlignment.Top
 
 Yes.Name = "Yes"
 Yes.Parent = CatSample
+Yes.Active = false
 Yes.AnchorPoint = Vector2.new(0.5, 0)
 Yes.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
 Yes.BorderColor3 = Color3.fromRGB(30, 36, 43)
@@ -61,7 +62,7 @@ Yes.Position = UDim2.new(0.5, 0, 1, 5)
 Yes.Size = UDim2.new(1, 0, 0, 25)
 Yes.Font = Enum.Font.SourceSansSemibold
 Yes.Text = "I should probably make more factories"
-Yes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Yes.TextColor3 = Color3.fromRGB(200, 200, 200)
 Yes.TextSize = 16.000
 Yes.TextStrokeTransparency = 0.800
 
@@ -92,13 +93,14 @@ UIAspectRatioConstraint_2.Parent = FlagOwn
 UIAspectRatioConstraint_2.AspectRatio = 1.500
 UIAspectRatioConstraint_2.DominantAxis = Enum.DominantAxis.Height
 
-local function KKKOZ_fake_script()
-	local script = Instance.new('LocalScript', CatSample)
+local function SKPLA_fake_script()
+    local script = Instance.new('LocalScript', CatSample)
 
-	script.Parent.Draggable = true;
-	
-	script.Parent.Yes.MouseButton1Click:Connect(function()
-		script.Parent:Destroy()
-	end)
+    script.Parent.Draggable = true;
+    task.wait(2)
+    script.Parent.Yes.TextColor3 = Color3.fromRGB(255,255,255)
+    script.Parent.Yes.MouseButton1Click:Connect(function()
+        script.Parent:Destroy()
+    end)
 end
-coroutine.wrap(KKKOZ_fake_script)()
+coroutine.wrap(SKPLA_fake_script)()
