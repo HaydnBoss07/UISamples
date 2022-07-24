@@ -9,7 +9,7 @@ local FlagOwn = Instance.new("ImageLabel")
 local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 
 CatSample.Name = "CatSample"
-CatSample.Parent = game.StarterGui.GameGui
+CatSample.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame
 CatSample.Active = true
 CatSample.AnchorPoint = Vector2.new(0.5, 0.5)
 CatSample.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
