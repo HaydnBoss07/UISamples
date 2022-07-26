@@ -4,6 +4,7 @@ local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local MouseOverText = Instance.new("StringValue", ResDef)
 -------------------------------------------------------
 MouseOverText.Value = "You are currently losing {1} units per 5 days"
+MouseOverText.Name = "MouseOverText"
 -------------------------------------------------------
 ResDef.Name = "ResDef" .. getgenv().necessaryresource;
 ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
