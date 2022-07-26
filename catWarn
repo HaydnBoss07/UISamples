@@ -2,7 +2,7 @@ local ResDef = Instance.new("TextButton")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
-ResDef.Name = "ResDef" .. tostring(getgenv().resCount)
+ResDef.Name = "ResDef" .. getgenv().necessaryresource
 ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 ResDef.AnchorPoint = Vector2.new(0.5, 1)
 ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
@@ -36,6 +36,10 @@ local function FEFCA_fake_script()
 		
 		for _, k in pairs(game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.CenterFrame.EconomyFrame.Resources.ResourceFrame:GetChildren()) do
 			if k.Name == getgenv().necessaryresource --[[can change later]] then firesignal(k.Trade.MouseButton1Click); end
+		end
+
+		for joes, mamas in pairs(game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame:GetChildren()) do
+			if string.find(mamas.Name, "ResDef") and mamas.Text ~= then
 		end
 	end)
 end
