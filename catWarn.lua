@@ -2,26 +2,6 @@ local ResDef = Instance.new("TextButton")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 -------------------------------------------------------
-local MouseOverText = Instance.new("StringValue", ResDef)
-MouseOverText.Value = "You are currently losing {1} units per 5 days"
-MouseOverText.Name = "MouseOverText"
--------------------------------------------------------
-local MouseOver = Instance.new("Frame")
-local Label = Instance.new("TextLabel")
-local SizeLimit = Instance.new("UISizeConstraint")
--------------------------------------------------------
-MouseOver.Name = "MouseOver"; MouseOver.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame
--------------------------------------------------------
-MouseOver.BackgroundColor3 = Color3.fromRGB(15, 18, 22); MouseOver.BorderColor3 = Color3.fromRGB(30, 36, 43); MouseOver.Position = UDim2.new(0.515384614, 0, 0.825598538, 0); MouseOver.Size = UDim2.new(0, 5, 0, 5); MouseOver.Visible = false; MouseOver.ZIndex = 2
--------------------------------------------------------
-Label.Name = "Label"; Label.Parent = MouseOver
--------------------------------------------------------
-Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255); Label.BackgroundTransparency = 1.000
-Label.Position = UDim2.new(0, 5, 0, 5); Label.Size = UDim2.new(1, -10, 1, -10); Label.ZIndex = 2; Label.Font = Enum.Font.SourceSansSemibold
-Label.Text = MouseOverText.Value; Label.TextColor3 = Color3.fromRGB(255, 255, 255); Label.TextSize = 14.000; Label.TextWrapped = true; Label.TextXAlignment = Enum.TextXAlignment.Left; Label.TextYAlignment = Enum.TextYAlignment.Top
--------------------------------------------------------
-SizeLimit.Name = "SizeLimit"; SizeLimit.Parent = MouseOver
--------------------------------------------------------
 ResDef.Name = "ResDef" .. getgenv().necessaryresource;
 ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 ResDef.AnchorPoint = Vector2.new(0.5, 1)
@@ -45,7 +25,8 @@ UITextSizeConstraint.MaxTextSize = 16
 UITextSizeConstraint.MinTextSize = 12
 
 local function FEFCA_fake_script()
-	local script = Instance.new('LocalScript', ResDef)
+	local MouseOver = game.Players.LocalPlayer.PlayerGui.GameGui.MouseOver;
+	local script = Instance.new('LocalScript', ResDef);
 
 	script.Parent.MouseButton2Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.CenterFrame.Visible = true;
