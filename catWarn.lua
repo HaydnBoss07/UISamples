@@ -63,3 +63,5 @@ function catNotification:AddNotification(baseText, hoverText)
 	end
 	coroutine.wrap(FEFCA_fake_script)()
 end
+
+return catNotification
