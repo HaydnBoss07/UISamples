@@ -9,7 +9,7 @@ function catNotification:AddNotification(baseText, hoverText)
 	MouseOverText.Value = "You are currently losing {1} units per 5 days"
 	MouseOverText.Name = "MouseOverText"
 	-------------------------------------------------------
-	ResDef.Name = "ResDef" .. getgenv().necessaryresource;
+	ResDef.Name = "ResDef" .. baseText;
 	ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 	ResDef.AnchorPoint = Vector2.new(0.5, 1)
 	ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
