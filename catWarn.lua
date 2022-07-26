@@ -10,6 +10,7 @@ function catNotification:AddNotification(baseText, hoverText)
 	MouseOverText.Name = "MouseOverText"
 	-------------------------------------------------------
 	ResDef.Name = "ResDef" .. baseText;
+	warn(baseText);
 	ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 	ResDef.AnchorPoint = Vector2.new(0.5, 1)
 	ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
