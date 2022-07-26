@@ -1,6 +1,6 @@
-local catWarn = {}
+local catNotification = {}
 
-function catWarn:AddNotification(baseText, hoverText)
+function catNotification:AddNotification(baseText, hoverText)
 	local ResDef = Instance.new("TextButton")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
