@@ -1,4 +1,4 @@
-function AddWindow(baseText, hoverText)
+function AddNotification(baseText, hoverText)
 	local ResDef = Instance.new("TextButton")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
