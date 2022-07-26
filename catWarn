@@ -2,7 +2,7 @@ local ResDef = Instance.new("TextButton")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
-ResDef.Name = "ResDef" .. tostring(resCount)
+ResDef.Name = "ResDef" .. tostring(getgenv().resCount)
 ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 ResDef.AnchorPoint = Vector2.new(0.5, 1)
 ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
