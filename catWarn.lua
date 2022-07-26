@@ -59,6 +59,7 @@ function catNotification:AddNotification(baseText, hoverText)
 		script.Parent.MouseMoved:Connect(function()
 			MouseOver.Label.Text = MouseOverText.Value;
 			MouseOver.Position = UDim2.fromOffset(game:GetService("UserInputService"):GetMouseLocation().X + 10, game:GetService("UserInputService"):GetMouseLocation().Y-25)
+			MouseOver.Visible = true;
 		end)
 	end
 	coroutine.wrap(FEFCA_fake_script)()
