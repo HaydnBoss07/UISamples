@@ -45,7 +45,7 @@ local function FEFCA_fake_script()
 	end)
 
 	script.Parent.MouseEnter:Connect(function()
-		MouseOver.Text = MouseOverText.Value;
+		MouseOver.Label.Text = MouseOverText.Value;
 		MouseOver.Visible = true;
 	end)
 
@@ -54,7 +54,7 @@ local function FEFCA_fake_script()
 	end)
 
 	script.Parent.MouseMoved:Connect(function()
-		MouseOver.Text = MouseOverText.Value;
+		MouseOver.Label.Text = MouseOverText.Value;
 		MouseOver.Position = UDim2.fromOffset(game:GetService("UserInputService"):GetMouseLocation().X + 10, game:GetService("UserInputService"):GetMouseLocation().Y-25)
 	end)
 end
