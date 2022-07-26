@@ -40,7 +40,7 @@ function catNotification:AddNotification(baseText, hoverText)
 			game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.CenterFrame.Visible = true;
 
 			for i, v in pairs(game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.CenterFrame:GetChildren()) do
-				if v.Name~= "EconomyFrame" and v.Name~= "ButtonFrame" and v:IsA("Frame") then v.Visible = false; elseif v.Name~= "ButtonFrame" then v.Visible = true; v.Main.Visible = false; v.Resources.Visible = true; end
+				if v.Name~= "EconomyFrame" and v.Name~= "ButtonFrame" and v:IsA("Frame") then v.Visible = false; elseif v.Name~= "ButtonFrame" and v:IsA("Frame") then v.Visible = true; v.Main.Visible = false; v.Resources.Visible = true; end
 			end
 
 			for _, k in pairs(game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.CenterFrame.EconomyFrame.Resources.ResourceFrame:GetChildren()) do
