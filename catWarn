@@ -3,7 +3,7 @@ local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
 ResDef.Name = "ResDef"
-ResDef.Parent = game.Players.LocalPlayer.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
+ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 ResDef.AnchorPoint = Vector2.new(0.5, 1)
 ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
 ResDef.BackgroundTransparency = 0.250
