@@ -1,8 +1,11 @@
 local ResDef = Instance.new("TextButton")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-
-ResDef.Name = "ResDef" .. getgenv().necessaryresource
+local MouseOverText = Instance.new("StringValue", ResDef)
+-------------------------------------------------------
+MouseOverText.Value = "You are currently losing {1} units per 5 days"
+-------------------------------------------------------
+ResDef.Name = "ResDef" .. getgenv().necessaryresource;
 ResDef.Parent = game.Players.LocalPlayer.PlayerGui.GameGui.MainFrame.StatsFrame.Stats.WarningFrame
 ResDef.AnchorPoint = Vector2.new(0.5, 1)
 ResDef.BackgroundColor3 = Color3.fromRGB(39, 47, 56)
